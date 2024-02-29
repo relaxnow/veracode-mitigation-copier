@@ -191,7 +191,7 @@ def match_for_scan_type(findings_from, from_app_guid, to_app_guid, dry_run, scan
         return 0 # no source findings to copy!
 
     if len(filter_approved(findings_from,id_list)) == 0:
-        logprint('No approved findings in "from" {}. Exiting.'.format())
+        logprint('No approved findings in "from" {}. Exiting.'.format(from_app_guid))
         return 0
 
     results_to_app_name = get_application_name(to_app_guid)
